@@ -1,0 +1,30 @@
+# environment / caches
+.venv/
+__pycache__/
+*.pyc
+.idea/
+.vscode/
+
+# data & generated outputs (see README: 数据准备)
+datasets/
+results/*
+!results/metrics/
+results/metrics/eval_log.txt
+_upstream_git/
+
+# logs
+*.log
+*.err
+demo/app_log.txt
+
+# Retinex-MEF: keep only the final self-trained checkpoint + its training log
+Retinex-MEF/exp/**/*.pth
+!Retinex-MEF/exp/**/model/ckpt_40.pth
+Retinex-MEF/test_case/results/
+
+# MEF-Net demo outputs
+MEFNet-master/fused_result/
+MEFNet-master/weighting_maps/
+
+# TransMEF weights (76 MB) - download link in README
+TransMEF-main/best_model.pth
